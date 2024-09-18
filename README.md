@@ -50,6 +50,11 @@ harmony =
 \include "../../../templates/lead_sheet.ly"
 ```
 
+### Lead Sheets
+
+- [A Fine Romance](/files/Hallie%20Weiner/standards/A%20Fine%20Romance.pdf)
+- [A Flower Is a Lovesome thing](/files/Hallie%20Weiner/standards/A%20Flower%20is%20a%20Lovesome%20Thing.pdf)
+
 ---
 
 More to come.
