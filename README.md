@@ -1,5 +1,9 @@
 ## Willie's LilyPond Setup
 
+Big ups to [LilyPond](https://lilypond.org/), it's a lot of fun to play with.
+
+---
+
 This repo serves to demonstrate how I extend LilyPond to create and style Lead Sheets.
 
 Shared styling and logic are found in `/templates`.
@@ -21,7 +25,7 @@ To use a template 2 files must be included:
 
 ### Example
 
-```
+```ly
 \version "2.24.4"
 \language "english"
 
@@ -45,3 +49,7 @@ harmony =
 
 \include "../../../templates/lead_sheet.ly"
 ```
+
+---
+
+More to come.
