@@ -14,7 +14,7 @@ melody = {
     \numericTimeSignature
     \key df \major
 
-    \mark \markup \box Intro
+    \sectionBox Intro
     \slashNotation 15 r8 f8 \break
 
     \repeat volta 2 {
