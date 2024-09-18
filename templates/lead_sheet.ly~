@@ -1,0 +1,33 @@
+\version "2.24.4"
+\language "english"
+
+\include "./layout.ly"
+\include "./fonts.ly"
+\include "./chords.ly"
+\include "./header.ly"
+
+\score {
+  <<
+    \new ChordNames
+    \with { \consists #Bass_changes_equal_root_engraver }
+    {
+      \set chordChanges = ##t
+      \harmony
+    }
+    \new Staff \with {
+        midiinstrument="acoustic grand"
+      }{
+      
+      \new Voice = "melody" {
+        \melody
+      }
+      \new Lyrics \lyricsto "melody" {
+        \lyricmode {
+          \lyrics
+        }
+      }
+    }
+  >>
+}
+
+\midi {}

@@ -1,0 +1,46 @@
+\version "2.24.4"
+\language "english"
+
+\paper {
+  #(set-paper-size "letter")
+  paper-height = 11\in
+  paper-width = 8.5\in
+  top-margin = 0.25\in
+  indent = 0\in
+  between-system-space = 1\in
+  between-system-padding = 1\in
+  ragged-last-bottom = ##t
+  ragged-bottom = ##t
+  ragged-right = ##f
+  annotate-spacing = ##f
+  markup-system-spacing = #'((minimum-distance . 26))
+  system-system-spacing = #'((minimum-distance . 15))
+  line-width = 7.5\in
+}
+
+\layout {
+  \override Score.Hairpin.thickness = #2
+  \override Score.Stem.thickness = #2
+  \override Score.TupletBracket.thickness = #2
+  \override Score.VoltaBracket.thickness = #2
+  \override Score.SystemStartBar.thickness = #4
+  \set Score.printInitialRepeatBar = ##t
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+  \override StaffGroup.SystemStartBracket.padding = #0.25
+  \override ChoirStaff.SystemStartBracket.padding = #0.25
+  \override Staff.Tie.line-thickness = #2
+  \override Staff.Slur.thickness = #3
+  \override Staff.PhrasingSlur.thickness = #3
+  \override Staff.BarLine.hair-thickness = #4
+  \override Staff.BarLine.thick-thickness = #8
+  \override Staff.MultiMeasureRest.hair-thickness = #3
+  \override Staff.MultiMeasureRestNumber.font-size = #2
+  \override LyricHyphen.thickness = #3
+  \override LyricExtender.thickness = #3
+  \override PianoPedalBracket.thickness = #2
+  \context {
+    \Staff
+    \RemoveEmptyStaves
+  }
+}
+
