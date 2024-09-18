@@ -2,27 +2,26 @@
 \language "english"
 
 leadSheetMelody = #(define-music-function
-                    (melody lyricsText)
-                    (ly:music? string?)
+                    (melody melodyLyrics)
+                    (ly:music? ly:music?)
                     #{
-                      \new Staff \with { midiinstrument="acoustic grand" }
+                      \new Staff \with { midiInstrument="acoustic grand" }
                       {
-                        \new Voice = "melody" {
-                          $melody
-                        }
-                        \new Lyrics \lyricsto "melody" {
-                          \lyricmode {
-                            $lyricsText
+                        <<
+                          \new Voice = "melody" {
+                            $melody
                           }
-                        }
+                          \new Lyrics \lyricsto "melody" $melodyLyrics
+                        >>
                       }
+
                     #})
 
 leadSheetBass = #(define-music-function
                   (bass)
                   (ly:music?)
                   #{
-                    \new Staff \with { midiinstrument="acoustic bass" }
+                    \new Staff \with { midiInstrument="acoustic bass" }
                     {
                       \new Voice = "bass" {
                         $bass

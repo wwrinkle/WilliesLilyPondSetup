@@ -6,7 +6,7 @@ sub_title = ""
 composer = ""
 style = ""
 part_name = ""
-lyrics_text = ""
+melody_lyrics = \lyricmode {  }
 
 melody = \relative c' { s }
 bass = \relative c' { s }
