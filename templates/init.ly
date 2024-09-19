@@ -7,6 +7,7 @@ composer = ""
 style = ""
 part_name = ""
 melody_lyrics = \lyricmode {  }
+melody_lyrics_line_two = \lyricmode {  }
 
 melody = \relative c' { s }
 bass = \relative c' { s }

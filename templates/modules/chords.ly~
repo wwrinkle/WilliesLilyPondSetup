@@ -2,6 +2,7 @@
 \language "english"
 
 % half-diminished (ementaler styling)
+% for use for ementaler font module
 % half_dim_v_align = #1.25
 % half_dim_font_size = #-3
 
@@ -16,7 +17,7 @@ ChordsList = {
   <c d ef g> - \markup { min\super "add 2" } % c min add 2
   <c ef f g> - \markup { min\super "add 4" } % c min add 4
   <c ef gf b> - \markup { \fontsize #2 \char ##x00B0  \char ##x2206  } % c dim maj7
-  <c ef gf bf> - \markup { \raise #half_dim_v_align \fontsize #half_dim_font_size \char ##x00F8 } 
+  <c ef gf bf> - \markup { \raise #half_dim_v_align \fontsize #half_dim_font_size \char ##x00F8 }
   <c e gs bf> - \markup { +\super7 } % c+7
   <c e g bf d' a'> - \markup { \super13 } % c13
 }
@@ -78,6 +79,7 @@ context-property."
                 (ly:grob-set-property! grob 'text
                                        (make-line-markup
                                         (list
+                                           (foo)
                                          (ly:context-property ctx 'slashChordSeparator)
                                          ((ly:context-property ctx 'chordNoteNamer)
                                           bass-pitch

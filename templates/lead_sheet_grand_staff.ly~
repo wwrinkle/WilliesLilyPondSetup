@@ -1,0 +1,18 @@
+\version "2.24.4"
+\language "english"
+
+\include "./modules/index.ly"
+
+#(begin (
+  (display "melody class")
+          (display (class-of melody))
+          ))
+
+\score {
+  \new StaffGroup <<
+    \leadSheetChords \harmony
+    \leadSheetMelody \melody \melody_lyrics \melody_lyrics_line_two
+    \leadSheetBass \bass
+  >>
+}
+

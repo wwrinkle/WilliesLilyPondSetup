@@ -2,8 +2,8 @@
 \language "english"
 
 leadSheetMelody = #(define-music-function
-                    (melody melodyLyrics)
-                    (ly:music? ly:music?)
+                    (melody melodyLyrics melodyLyricsLineTwo)
+                    (ly:music? ly:music? ly:music?)
                     #{
                       \new Staff \with { midiInstrument="acoustic grand" }
                       {
@@ -12,6 +12,7 @@ leadSheetMelody = #(define-music-function
                             $melody
                           }
                           \new Lyrics \lyricsto "melody" $melodyLyrics
+                          \new Lyrics \lyricsto "melody" $melodyLyricsLineTwo
                         >>
                       }
 

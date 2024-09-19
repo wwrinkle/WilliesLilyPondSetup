@@ -14,7 +14,9 @@
   ragged-right = ##f
   annotate-spacing = ##f
   markup-system-spacing = #'((minimum-distance . 26))
-  system-system-spacing = #'((minimum-distance . 15))
+  system-system-spacing = #'(
+                              (minimum-distance . 16)
+                              (padding . 3))
   line-width = 7.5\in
 }
 
@@ -38,6 +40,8 @@
   \override LyricHyphen.thickness = #3
   \override LyricExtender.thickness = #3
   \override PianoPedalBracket.thickness = #2
+  \override ChordName.font-size = #3
+  \override Score.SectionLabel.font-size = #4
   \context {
     \Staff
     \RemoveEmptyStaves

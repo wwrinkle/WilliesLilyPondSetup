@@ -6,7 +6,7 @@
 \score {
   <<
     \leadSheetChords \harmony
-    \leadSheetMelody \melody \melody_lyrics
+    \leadSheetMelody \melody \melody_lyrics \melody_lyrics_line_two
   >>
 }
 
