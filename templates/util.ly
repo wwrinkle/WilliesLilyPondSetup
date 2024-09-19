@@ -15,3 +15,15 @@ sectionBox = #(define-music-function
                #{
                  \sectionLabel \markup \box $text
                #})
+
+startPedalSpan = #(define-music-function
+                   (text)
+                   (markup?)
+                   #{
+                     \override TextSpanner.dash-fraction = #1
+                     \override TextSpanner.bound-details.left.text
+                     = \markup {
+                       \small $text
+                     }
+                     \startTextSpan
+                   #})

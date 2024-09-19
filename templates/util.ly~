@@ -10,9 +10,20 @@ slashNotation = #(define-music-function
                   #})
 
 sectionBox = #(define-music-function
-(text)
-(string?)
-#{
-  \sectionLabel \markup \box "Intro"
-}
-)
+               (text)
+               (string?)
+               #{
+                 \sectionLabel \markup \box $text
+               #})
+
+startPedalSpan = #(define-music-function
+                   (text)
+                   (markup?)
+                   #{
+                    \override TextSpanner.dash-fraction = #0.2
+                     \override TextSpanner.bound-details.left.text
+                     = \markup {
+                       \small $text
+                     }
+                     \startTextSpan
+                   #})
