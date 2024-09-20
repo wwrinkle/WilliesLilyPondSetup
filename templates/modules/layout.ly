@@ -15,7 +15,7 @@
   annotate-spacing = ##f
   markup-system-spacing = #'((minimum-distance . 26))
   system-system-spacing = #'(
-                              (minimum-distance . 16)
+                              (minimum-distance . 15)
                               (padding . 3))
   line-width = 7.5\in
 }
