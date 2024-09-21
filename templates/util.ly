@@ -4,7 +4,7 @@ slashNotation = #(define-music-function
                   #{
                     \improvisationOn
                     \omit Stem
-                    \repeat unfold $i b'4
+                    \repeat unfold $i \absolute b'4
                     \improvisationOff
                     \undo \omit Stem
                   #})
