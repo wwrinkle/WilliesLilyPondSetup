@@ -15,7 +15,7 @@
   annotate-spacing = ##f
   markup-system-spacing = #'((minimum-distance . 26))
   system-system-spacing = #'(
-                              (minimum-distance . 16)
+                              (minimum-distance . 15)
                               (padding . 3))
   line-width = 7.5\in
 }
@@ -42,13 +42,15 @@
   \override PianoPedalBracket.thickness = #2
   \override ChordName.font-size = #3
   \override Score.SectionLabel.font-size = #4
-  \override Voice.HorizontalBracket.direction = #UP
+  \override Score.MetronomeMark.font-size = #4
+  \override Score.MetronomeMark.X-offset = #-4
+  \override Score.MetronomeMark.Y-offset = #6.5
+  \override StaffSpacing.stem-spacing-correction = #100
+    \override Stem.X-offset = -2
+
   \context {
     \Staff
     \RemoveEmptyStaves
-    \Voice
-    \consists "Horizontal_bracket_engraver"
-    
   }
 }
 

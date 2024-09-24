@@ -42,6 +42,12 @@
   \override PianoPedalBracket.thickness = #2
   \override ChordName.font-size = #3
   \override Score.SectionLabel.font-size = #4
+  \override Score.MetronomeMark.font-size = #4
+  \override Score.MetronomeMark.X-offset = #-4
+  \override Score.MetronomeMark.Y-offset = #6.5
+  \override StaffSpacing.stem-spacing-correction = #100
+  % \override Stem.X-offset = #2.6
+
   \context {
     \Staff
     \RemoveEmptyStaves

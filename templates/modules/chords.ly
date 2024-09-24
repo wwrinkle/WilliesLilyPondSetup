@@ -13,7 +13,7 @@ ChordsList = {
   <c e g b d fs> - \markup {
     \char ##x2206 \smaller { \super { 9 \super \sharp 11 }  }
   } % c maj9 #11
-  <c' e' g' a' d''> - \markup { \tiny " " \super 6 / \tiny 9 } % c 6/9
+  <c' e' g' a' d''> - \markup { \tiny " " \super 6 / \tiny "9 " } % c 6/9
   <c' ef' g' a' d''> - \markup { min\super 6 / \tiny 9 } % c min 6/9
   <c d e g> - \markup { \super "add 2" } % c add 2
   <c e f g> - \markup { \super "add 4" } % c add 4

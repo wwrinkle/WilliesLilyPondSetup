@@ -9,6 +9,7 @@ leadSheetMelody = #(define-music-function
                       {
                         <<
                           \new Voice = "melody" {
+                            % \with \consists Pitch_squash_engraver
                             $melody
                           }
                           \new Lyrics \lyricsto "melody" $melodyLyrics

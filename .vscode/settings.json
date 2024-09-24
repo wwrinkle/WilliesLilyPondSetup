@@ -4,7 +4,7 @@
       {
         "match": "\\.ly$",
         "isAsync": true,
-        "cmd": "echo 'formatting ${file}' && ly reformat -i \"${file}\" && echo '***filename***' && echo \"$(echo ${file} | sed 's/\\(.*\\).ly/\\1/)')\" \"${file}\" && echo 'compiling ${file}' && /home/willie/Projects/lilypond/_source/lilypond-2.24.4/bin/lilypond -V --output=\"$(dirname \"${file}\")\" \"${file}\""
+        "cmd": "echo 'formatting ${file}' && ly reformat -i \"${file}\" && echo '***filename***' && echo \"$(echo ${file} | sed 's/\\(.*\\).ly/\\1/)')\" \"${file}\" && echo 'compiling ${file}' && /home/willie/Projects/lilypond/_source/lilypond-2.24.4/bin/lilypond --output=\"$(dirname \"${file}\")\" \"${file}\""
       }
     ]
   }
