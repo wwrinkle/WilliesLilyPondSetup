@@ -54,16 +54,33 @@ endParenthesis = #(define-music-function
                    #}
                    )
 
-improvisationOn = {
+improvisationOnStemUp = {
   \override Stem.X-offset = #2.8
   \override Stem.length = #3.75
   \override Stem.Y-offset = #-0.1
+  \stemUp
   \improvisationOn
 }
 
-improvisationOff = {
+improvisationOffStemUp = {
   \revert Stem.X-offset
   \revert Stem.length
   \revert Stem.Y-offset
+  \stemNeutral
+  \improvisationOff
+}
+
+improvisationOnStemDown = {
+  \override Stem.length = #6
+  \override Stem.Y-offset = #1
+  \stemDown
+  \improvisationOn
+}
+
+
+improvisationOffStemDown = {
+  \revert Stem.length
+  \revert Stem.Y-offset
+  \stemNeutral
   \improvisationOff
 }

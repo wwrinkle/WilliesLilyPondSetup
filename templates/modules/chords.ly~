@@ -13,7 +13,7 @@ ChordsList = {
   <c e g b d fs> - \markup {
     \char ##x2206 \smaller { \super { 9 \super \sharp 11 }  }
   } % c maj9 #11
-  <c' e' g' a' d''> - \markup { \tiny " " \super 6 / \tiny "9  } % c 6/9
+  <c' e' g' a' d''> - \markup { \tiny " " \super 6 / \tiny "9 " } % c 6/9
   <c' ef' g' a' d''> - \markup { min\super 6 / \tiny 9 } % c min 6/9
   <c d e g> - \markup { \super "add 2" } % c add 2
   <c e f g> - \markup { \super "add 4" } % c add 4
@@ -24,6 +24,8 @@ ChordsList = {
   <c e gs bf> - \markup { +\super7 } % c+7
   <c e g bf d' a'> - \markup { \super13 } % c13
   <c f bf> - \markup {  \super { 7 sus } } % c7sus
+  <c f g d'> - \markup {  \super { 9 sus } } % c9sus
+    <c f g d'> - \markup {  \super 7 { 9 sus } } % cb9sus
   <c f bf df> -  \markup { \super { 7 sus \small \raise #0.4 \flat 9 } } % c7susb9
 }
 AllChords = #(append (sequential-music-to-chord-exceptions ChordsList #t) ignatzekExceptions)

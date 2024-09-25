@@ -6,6 +6,8 @@
 % half_dim_v_align = #1.25
 % half_dim_font_size = #-3
 
+seven_flat_nine_sus_markup = \markup { \super { 7 \tiny " " \raise #0.35 \small \flat 9 sus } }
+
 ChordsList = {
   <c e g b fs'> - \markup {
     \char ##x2206 \smaller { \super { \super \sharp 11 }  }
@@ -24,7 +26,10 @@ ChordsList = {
   <c e gs bf> - \markup { +\super7 } % c+7
   <c e g bf d' a'> - \markup { \super13 } % c13
   <c f bf> - \markup {  \super { 7 sus } } % c7sus
-  <c f bf df> -  \markup { \super { 7 sus \small \raise #0.4 \flat 9 } } % c7susb9
+  <c f g d'> - \markup {  \super { 9 sus } } % c9sus
+  <c f bf df> - \seven_flat_nine_sus_markup % c7b9sus
+  <d, g c ef> - \markup { \super { 7 \tiny " " \raise #0.35 \small \flat 9 sus } } % c7b9sus
+  <a, d g bf> - \markup { \super { 7 \tiny " " \raise #0.35 \small \flat 9 sus } } % c7b9sus
 }
 AllChords = #(append (sequential-music-to-chord-exceptions ChordsList #t) ignatzekExceptions)
 
