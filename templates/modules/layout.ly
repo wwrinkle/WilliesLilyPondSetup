@@ -46,7 +46,6 @@
   \override Score.MetronomeMark.X-offset = #-4
   \override Score.MetronomeMark.Y-offset = #6.5
   \override StaffSpacing.stem-spacing-correction = #100
-  % \override Stem.X-offset = #2.6
 
   \context {
     \Staff
