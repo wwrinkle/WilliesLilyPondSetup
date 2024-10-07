@@ -1,33 +1,11 @@
 \version "2.24.4"
 \language "english"
 
-\include "./layout.ly"
-\include "./fonts.ly"
-\include "./chords.ly"
-\include "./header.ly"
+\include "./modules/index.ly"
 
-\score {
-  <<
-    \new ChordNames
-    \with { \consists #Bass_changes_equal_root_engraver }
-    {
-      \set chordChanges = ##t
-      \harmony
-    }
-    \new Staff \with {
-        midiinstrument="acoustic grand"
-      }{
-      
-      \new Voice = "melody" {
-        \melody
-      }
-      \new Lyrics \lyricsto "melody" {
-        \lyricmode {
-          \lyrics
-        }
-      }
-    }
-  >>
-}
+\score { <<
+  \leadSheetChords \harmony
+  \leadSheetMelody \melody \melody_lyrics \melody_lyrics_line_two
+>> }
 
 \midi {}

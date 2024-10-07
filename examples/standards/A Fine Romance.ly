@@ -30,7 +30,7 @@ melody = {
         }
       }
     }
-    ef1 | \tuplet 3/2 { g4 f e } ef4 bf' | af1~ | af2 r | \bar "."
+    ef1 | \tuplet 3/2 { g4 f e } ef4 bf' | af1~ | af2 r | \fine
   }
 }
 

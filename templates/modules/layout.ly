@@ -26,7 +26,6 @@
   \override Score.TupletBracket.thickness = #2
   \override Score.VoltaBracket.thickness = #2
   \override Score.SystemStartBar.thickness = #4
-  \set Score.printInitialRepeatBar = ##t
   \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   \override StaffGroup.SystemStartBracket.padding = #0.25
   \override ChoirStaff.SystemStartBracket.padding = #0.25

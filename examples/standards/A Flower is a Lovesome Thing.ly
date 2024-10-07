@@ -38,7 +38,7 @@ melody = {
     \sectionBox "A"
     af8 gf f gf f4 f8 f~ | f2. r8 f | af gf f gf f4 f8 f~ | f2. r8 f| \break
     g f d bf c'4. bf8 | e, ef c af bf'4. df,!8 | \break
-    e d cs d df4 df8 df~ | df2. r4 \bar "."
+    e d cs d df4 df8 df~ | df2. r4 \fine
   }
 }
 
