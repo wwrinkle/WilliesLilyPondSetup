@@ -40,10 +40,11 @@
   \override LyricExtender.thickness = #3
   \override PianoPedalBracket.thickness = #2
   \override ChordName.font-size = #3
+  \override Score.SectionLabel.Y-offset = #6
   \override Score.SectionLabel.font-size = #4
   \override Score.MetronomeMark.font-size = #4
-  \override Score.MetronomeMark.X-offset = #-4
-  \override Score.MetronomeMark.Y-offset = #6.5
+  \override Score.MetronomeMark.X-offset = #0
+  \override Score.MetronomeMark.Y-offset = #12
   \override StaffSpacing.stem-spacing-correction = #100
 
   \context {

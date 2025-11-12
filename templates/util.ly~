@@ -1,13 +1,27 @@
 \version "2.24.4"
 \language "english"
 
+
+
+   (let* ((staff-space (ly:staff-symbol-staff-space grob))
+          (thickness (* staff-space 0.15))
+          (width (* staff-space 1.2))
+          (height (* staff-space 1.5)))
+     (grob-interpret-markup grob
+                            (markup #:translate (cons (* width -0.5) (* height -0.5))
+                                    #:draw-line (cons width height)
+                                    #:with-dimensions (cons 0 width) (cons 0 height)))))
+
+
+
 slashNotation = #(define-music-function
                   (i)
                   (number?)
                   #{
+
                     \improvisationOn
                     \omit Stem
-                    \repeat unfold $i \absolute b'4
+                    \repeat unfold $i r4
                     \improvisationOff
                     \undo \omit Stem
                   #})
@@ -54,16 +68,33 @@ endParenthesis = #(define-music-function
                    #}
                    )
 
-improvisationOn = {
+improvisationOnStemUp = {
   \override Stem.X-offset = #2.8
-  % \override Stem.length = #10
-  \override Stem.Y-offset = #0
+  \override Stem.length = #3.75
+  \override Stem.Y-offset = #-0.1
+  \stemUp
   \improvisationOn
 }
 
-improvisationOff = {
+improvisationOffStemUp = {
   \revert Stem.X-offset
-  % \revert Stem.length
+  \revert Stem.length
   \revert Stem.Y-offset
+  \stemNeutral
   \improvisationOff
-  }
+}
+
+improvisationOnStemDown = {
+  \override Stem.length = #6
+  \override Stem.Y-offset = #1
+  \stemDown
+  \improvisationOn
+}
+
+
+improvisationOffStemDown = {
+  \revert Stem.length
+  \revert Stem.Y-offset
+  \stemNeutral
+  \improvisationOff
+}
