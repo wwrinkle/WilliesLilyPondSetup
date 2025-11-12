@@ -1,0 +1,38 @@
+\version "2.24.4"
+\language "english"
+
+\include "../../templates/init.ly"
+
+tempoSetting = \tempo 4 = 165
+
+title = "Bourbon Street Parade"
+
+melody = {
+  \relative c' {
+    \time 4/4
+    \numericTimeSignature
+    \key af \major
+    \tuplet 3/2 { af'4 ef af } \tuplet 3/2 { c af c } | ef2. r4 | \tuplet 3/2 { c ef c } \tuplet 3/2 { af c af } | ef2. r4 | \break
+    \repeat volta 2 {
+      r2 c' | g4. af8~ af2 | r2 c | g4. af8~ af2 \break
+      | r2 c | g4. af8~ af4. df8~ | df1~ | df | \break
+      r2 df2 | a4. bf8~ bf2 | r2 df | a4. bf8~ bf2 | \break
+      r2 ef | ef bf4. c8~ | c1~ | c1 \bar "||" \break
+      r2 c2 | g4. af8~ af2 | r2 c | g4. af8~ af2 \break
+      r2 c | bf2  af | f1~ | f2 r | \break
+      bf4. bf8 af4 bf | b4. bf8~ bf2 | c4. c8 b4 c | df4. c8~ c2 | \break
+      c2. ef,4 | c'2. af4 |af1~ | af2 r |
+    }
+
+  }
+}
+
+harmony =
+\chordmode {
+    r1*3
+
+}
+
+
+\include "../../templates/lead_sheet.ly"
+

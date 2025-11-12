@@ -3,10 +3,16 @@
 
 \include "./modules/index.ly"
 
-\score \new StaffGroup <<
-  \leadSheetChords \harmony
-  \leadSheetMelody \melody \melody_lyrics \melody_lyrics_line_two
-  \leadSheetBass \bass
->>
+\score {
+  \new StaffGroup <<
+    \leadSheetChords \harmony
+    \leadSheetMelody \melody \melody_lyrics \melody_lyrics_line_two
+    \leadSheetBass \bass
+  >>
+  \layout {}
+  \midi {
+    \tempoSetting
+  }
+}
 
 

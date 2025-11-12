@@ -1,0 +1,43 @@
+\version "2.24.4"
+\language "english"
+
+\include "../../templates/init.ly"
+
+title = "Deep Ellum Blues"
+tempoSetting = \tempo 4 = 200
+
+melody = {
+  \relative c' {
+    \time 4/4
+    \numericTimeSignature
+    \key bf \major
+    \tempoSetting
+    \partial 2 f4 g |
+    \repeat volta 2 {
+      \repeat volta 2 {
+        bf bf2 g4 | f bf,  d f | bf bf2 g4 | f2 r | \break
+        bf4 bf2 g4 | f bf, d f | bf bf2 a4 | af2 r | \break
+        g g | bf4 bf2. | bf4 bf bf f  | af2 g4 f | bf,1 |
+        \alternative {
+          { r2 f'4 g  \break} 
+          {
+            r4 d ef e  \bar "||"
+            f2 a | f4 f2. | bf4 bf bf f | af2 g4 f | bf,1 | r
+          }
+        }
+      }
+    }
+  }
+}
+
+harmony =
+\chordmode {
+  s2 | bf1*7 bf1:7
+  ef1*2:7 bf1 f:7.9+ bf1*3
+  f1*2:7 f1:sus7 f:7.9+ bf1*2
+
+}
+
+
+\include "../../templates/lead_sheet.ly"
+

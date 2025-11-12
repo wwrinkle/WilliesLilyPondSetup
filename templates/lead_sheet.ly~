@@ -3,9 +3,34 @@
 
 \include "./modules/index.ly"
 
-\score { <<
-  \leadSheetChords \harmony
-  \leadSheetMelody \melody \melody_lyrics \melody_lyrics_line_two
->> }
+formattedTempo =
+#(if tempoSetting
+     tempoSetting
+     #{ \tempo 4 = 120 #})
 
-\midi {}
+\score {
+
+  \removeWithTag #'midi
+  <<
+    \leadSheetChords \harmony
+    \leadSheetMelody { \tempoSetting \melody} \melody_lyrics \melody_lyrics_line_two
+  >>
+
+  \layout {
+  }
+
+
+}
+
+\score {
+\removeWithTag #'midi
+  \unfoldRepeats
+  <<
+    \leadSheetChords \harmony
+    \leadSheetMelody { \tempoSetting \melody} \melody_lyrics \melody_lyrics_line_two
+  >>
+  \midi {
+    \formattedTempo
+  }
+}
+

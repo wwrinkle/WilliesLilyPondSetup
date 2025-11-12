@@ -12,5 +12,6 @@ melody_lyrics_line_two = \lyricmode {  }
 melody = \relative c' { s }
 bass = \relative c' { s }
 harmony = \chordmode { s }
+tempoSetting = ##f
 
 \include "./util.ly"

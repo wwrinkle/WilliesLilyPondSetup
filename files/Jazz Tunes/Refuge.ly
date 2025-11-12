@@ -1,0 +1,48 @@
+\version "2.24.4"
+\language "english"
+
+\include "../../templates/init.ly"
+
+title = "Refuge"
+composer = "Andrew Hill"
+
+melody = \relative c' {
+  \key c \major
+  \time 6/4
+  \sectionBox "A"
+  \repeat volta 2 {
+    \bar ".|:"
+    r2 bf4 f' ef f | ef df bf ef df bf | ef2.~ ef4 c df | d!4 d2. r2 | \break
+    r2 <ef c>4 <c' df,> <bf f> <c ef,> | <bf ef,> af f bf af f | bf2.~ bf4 g <f af> | <a! df,> <c df,>2~ <c df,>2. | \break
+    <f af,>4 r <c f,> <g'! c,>4 <f gf,> <g c,> | <f bf,>4 <bf, f>2~ <bf f>2. |  c2.~ c2. | bf2. c2. | \break
+    f2.~ f2. | ef2. f2. |<<{fs2.~ fs2 r4 | gs1 r4 as } \\ {c,,2 r1 | bf2 r1 } >> | \break
+    << { c'2. bf2 f'4 | ef4. c af c } \\ { r4 bf,2 r4 bf2 | r4 bf2 r4 bf2 } >> | <bf' ef,>4 <af df,>2 r2. | r2. <bf ef,> | \break
+    g2 af g | f1 af2 | << { e!1.~ | e1 r2 |} \\ { <d! a!>2 <d af>4 <d a>2 <d af>4 | <d! a!>2 <d af>4 <d a>2 r4 } >>
+  }
+}
+
+bass =  \relative c' {
+  \clef bass
+  \key c \major
+  r2 bf4 bf a! bf | g bf af g af bf | af1. | c4 f,2. r2 |
+  r1. | r1. | d4 f2~ f2. | ef4 g2~ g2. |
+  bf4 r2 af2. | cf4 ef,2~ ef2. |  << { r2. f'2 ef4 | ef df2~ df2. } \\  { r2. bf2. | af4 gf2 ~ gf2. } >> |
+  r2. af4 gf2 | bf4 af2 f2. | r2. gs | fs e
+  r4 bf'2 r4 bf2 | r4 bf2 r4 bf2 | gf4 f2 r2. | r ef |
+  c'1. | df1 r4 f, | << { a! af2.~ af2~ | af1 r2 } \\ { d,2 af'4 d,2 af'4 | d,2 af'4 d,2 af'4 } >>
+}
+
+harmony =
+\chordmode {
+  df1.:maj7.11+ bf1.*2:m g1.:m9
+  gf1.:maj7.11+ ef:m b:maj7.11+ ef:13
+  gf:maj7.11+ cf:maj7.11+ gf1.*2:maj7.11+
+  <d f a bf> c1.:7.11+ <c e gs bf>
+  gf1.*2:maj7.11+ ef1.:m11 <d f a bf>
+  <d f a bf> df/c e1.*2:sus7
+}
+
+tempoSetting = \tempo 4 = 260
+
+\include "../../templates/lead_sheet_grand_staff.ly"
+

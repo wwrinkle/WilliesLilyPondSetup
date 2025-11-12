@@ -1,0 +1,46 @@
+\version "2.24.4"
+\language "english"
+
+\header {
+  title = "Ashrei"
+  composer = "Aly Halpert"
+  tagline = ##f
+}
+
+\score {
+  <<
+    \new ChordNames \chordmode {
+      r4 | g1 | a1*2:m | g1 | a2:m g | e1:m | a2:m g | a1:m |
+    }
+    \relative c' {
+      \new Staff <<
+        \new Voice = "melody" {
+          \key a \minor
+          \numericTimeSignature
+          \partial 4 e4 | d2. c16 d e8 | a,2.~ a8 e' | a a a a a g e g | g2. ~ g8 e \break
+          | a a a a a g4. | e8 g e g e d4. | e2 ~ e8 d c d | a1 \bar "."
+        }
+        \new Lyrics \lyricsto "melody"{
+          \lyricmode {
+            Ash -- rei yosh - - vei ash -- rei yosh -- vei -- vei -- te - - - cha, ash --
+            rei yosh -- vei vei -- te -- cha od y' -- ha -- l' -- lu -- cha se - - - lah
+          }
+        }
+        \new Lyrics \lyricsto "melody"{
+          \lyricmode {
+            I sing to - - you I sing for what is ho -- ly and is true, I sing for all cre -- a -- tion, for_life and lib -- er -- a -- tion, e -- very day a -- new.
+          }
+        }
+      >>
+    }
+
+  >>
+  \layout {
+    \set noChordSymbol = ""
+  }
+  \midi {
+    \tempo 4 = 80
+  }
+
+}
+

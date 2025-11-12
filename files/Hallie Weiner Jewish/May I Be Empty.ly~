@@ -1,0 +1,64 @@
+\version "2.24.4"
+\language "english"
+
+\header {
+  title = "May I Be Empty"
+  composer = "Batya Levine"
+  tagline = ##f
+}
+
+\score {
+  \relative c' {
+    \new StaffGroup
+    <<
+      \new Staff \with { midiInstrument="choir ahhs" } <<
+        {
+          <<
+            \new Voice = "voice one" {
+              \key c \major
+              \numericTimeSignature
+              \partial 2 r8 e e e |
+              \repeat volta 2 { d c4 e8 d c d e16 f~ | f8 e d c16 e~  e8 e e e | d c4 e8 d c d e | c2 r8 e e e | }
+            }
+            \new Lyrics \lyricsto "voice one"  {
+              \lyricmode {
+                May I be emp -- ty and o -- pen to re -- cei - ve the light. -- May I be emp -- ty and o -- pen to re -- ceive May I be
+              }
+            }
+          >>
+        }
+      >>
+      \new Staff \with { midiInstrument="choir ahhs" } <<
+        {
+          \partial 2 r8 c c c | a g4 c8 a g a c16 d~ | d8 c a g16 c~  c8 c c c | a g4 c8 a g a c | g2 r8 c c c |
+        }
+      >>
+      \new Staff \with { midiInstrument="choir ahhs" } <<
+        {
+          \partial 2 r8 g' g g | f e4 g8 f e f g16 c~ | c8 g f e16 g~  g8 g g g | f e4 g8 f e f g | e2 r8 g g g |
+        }
+      >>
+    >>
+  }
+  \midi {}
+  \layout {
+  \context {
+    \Lyrics
+    \override VerticalAxisGroup.staff-affinity = ##f
+    \override VerticalAxisGroup.staff-staff-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 2)
+       (padding . 2))
+  }
+  \context {
+    \Staff
+    \override VerticalAxisGroup.staff-staff-spacing =
+    #'((basic-distance . 0)
+       (minimum-distance . 2)
+       (padding . 2))
+  }
+}
+}
+
+
+
