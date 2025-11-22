@@ -12,6 +12,10 @@ melody_lyrics_line_two = \lyricmode {  }
 melody = \relative c' { s }
 bass = \relative c' { s }
 harmony = \chordmode { s }
+harmonicRhythm = \chordmode { s }
 tempoSetting = ##f
+debug  = ##f
+topSpacing = 26
+systemSpacing = 15
 
 \include "./util.ly"

@@ -5,3 +5,4 @@
 \include "./header.ly"
 \include "./layout.ly"
 \include "./staves.ly"
+\include "./tempo.ly"

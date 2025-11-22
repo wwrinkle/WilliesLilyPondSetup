@@ -1,0 +1,4 @@
+formattedTempo =
+#(if tempoSetting
+     tempoSetting
+     #{ \tempo 4 = 120 #})
