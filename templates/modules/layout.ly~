@@ -7,16 +7,21 @@
   paper-width = 8.5\in
   top-margin = 0.25\in
   indent = 0\in
-  between-system-space = 1\in
-  between-system-padding = 1\in
-  ragged-last-bottom = ##t
-  ragged-bottom = ##t
-  ragged-right = ##f
+  % between-system-space = 1\in
+  % between-system-padding = 1\in
+  % ragged-last-bottom = ##t
+  % ragged-bottom = ##t
+  % ragged-right = ##f
   annotate-spacing = ##f
-  markup-system-spacing = #'((minimum-distance . 26))
-  system-system-spacing = #'(
-                              (minimum-distance . 15)
-                              (padding . 3))
+  markup-system-spacing = #`(
+                              (minimum-distance . ,topSpacing)
+                              (stretchability . 10)
+                              )
+  system-system-spacing = #`(
+                              (minimum-distance . ,systemSpacing)
+                              (padding . 3)
+                              (stretchability . 10)
+                               (stretchability . 10))
   line-width = 7.5\in
 }
 
@@ -26,7 +31,6 @@
   \override Score.TupletBracket.thickness = #2
   \override Score.VoltaBracket.thickness = #2
   \override Score.SystemStartBar.thickness = #4
-  \set Score.printInitialRepeatBar = ##t
   \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   \override StaffGroup.SystemStartBracket.padding = #0.25
   \override ChoirStaff.SystemStartBracket.padding = #0.25
@@ -41,13 +45,12 @@
   \override LyricExtender.thickness = #3
   \override PianoPedalBracket.thickness = #2
   \override ChordName.font-size = #3
+  \override Score.SectionLabel.Y-offset = #6
   \override Score.SectionLabel.font-size = #4
   \override Score.MetronomeMark.font-size = #4
-  \override Score.MetronomeMark.X-offset = #-4
-  \override Score.MetronomeMark.Y-offset = #6.5
+  \override Score.MetronomeMark.X-offset = #0
   \override StaffSpacing.stem-spacing-correction = #100
-    \override Score.printInitialRepeatBar = ##t
-
+  \override Score.JumpScript.direction = #UP
 
   \context {
     \Staff

@@ -118,3 +118,27 @@ leadSheetChords = #(define-music-function
                         $harmony
                       }
                     #})
+
+
+leadSheetHarmonicRhythm = #(define-music-function
+                            (harmonicRhythm)
+                            (ly:music?)
+                            #{
+                              \tag #'layout {
+                                \new RhythmicStaff \with {
+                                  \override VerticalAxisGroup.staff-affinity = #DOWN
+                                  \remove Time_signature_engraver
+                                  \remove Staff_symbol_engraver
+                                  \magnifyStaff #0.8
+                                }
+                                {
+                                  \new Voice = "HarmonicRhythm"
+
+                                  \reduceChords {
+                                    \override RhythmicStaff.NoteHead.style = #'diamond
+                                    $harmonicRhythm
+                                  }
+                                }
+                              }
+                            #})
+

@@ -1,0 +1,88 @@
+\version "2.24.4"
+\language "english"
+
+\include "../../templates/init.ly"
+
+tempoSetting = \tempo 4 = 120
+
+title = "Alexander's Ragtime Band"
+composer = "Irving Berlin"
+
+melody = {
+  \relative c' {
+    \time 4/4
+    \numericTimeSignature
+    \key c \major
+    \sectionBox "Verse"
+    \repeat volta 2 {
+      \bar ".|:" r4 e8 ds e g4. | r4 e8 ds e g4. | r4 a8 gs a c4 a8 | g!4 f e d | \break
+      \alternative {
+        \volta 1 {
+          r4 e8 ds e g4. | r4 e8 ds e g4. | r4 d8 e fs e d4 | r4 g8 a b a g4 | \break
+        }
+        \volta 2 {
+          c2 g | f a | r4 g8 a b a g4 | c2~ c8 gs a gs | \section \break
+        }
+      }
+    }
+    \key f \major
+    \repeat volta 2 {
+      \repeat volta 2 {
+        \sectionBox "Chorus"
+        a2~ a8 gs a gs | a2. a8 gs | a4 g! e c | f2~ f8 cs' d cs | \break
+        d2~ d8 cs d cs | d2. d8 cs | d4 bf f bf |
+        \alternative {
+          \volta 1 {
+            d2. a8 bf | \section \break
+            c c d a c4 d8 a | c c d a c4 r | f, a8 c, f4 a8 c, | f f a c, f4 r | \break
+            g4 g2 a4 b g a b | c1 | bf8 a g4 r8 gs a gs | \break
+          }
+          \volta 2 {
+            d'2~ d8 a bf b | \section
+            c4 c c a | g f a g | f2 f' | d4 f~ f8 b, c b | \break
+            c2~ c8 b c b | c2~ c8 d4 cs8 | d4 c! a g | f2 r |
+          }
+        }
+
+      }
+    }
+  }
+}
+
+harmony =
+\chordmode {
+  \repeat volta 2 {
+    c1~ | c2 c:7 | f1~ | f2 g:7 |
+    \alternative {
+      \volta 1 {
+        c1*2 | d1:7 | g:7 |
+      }
+      \volta 2 {
+        c2 c:7 | f fs:dim7 | g1:7 | c2 c:7 |
+      }
+    }
+  }
+  \repeat volta 2 {
+    \repeat volta 2 {
+      f1*2 | g2:7 c:7 | f f:7 |
+      bf1*3~ |
+      \alternative {
+        \volta 1 {
+          bf1 |
+          f1*4 |
+          g1*2:7 | c1 | c:7 |
+          
+        }
+        \volta 2 {
+
+        }
+      }
+
+    }
+  }
+
+}
+
+
+\include "../../templates/lead_sheet.ly"
+

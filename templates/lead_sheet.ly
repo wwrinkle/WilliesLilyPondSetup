@@ -3,16 +3,16 @@
 
 \include "./modules/index.ly"
 
-formattedTempo =
-#(if tempoSetting
-     tempoSetting
-     #{ \tempo 4 = 120 #})
+\paper {
+  annotate-spacing = #debug
+}
 
 \score {
 
   \removeWithTag #'midi
   <<
     \leadSheetChords \harmony
+    \leadSheetHarmonicRhythm \harmonicRhythm
     \leadSheetMelody { \tempoSetting \melody} \melody_lyrics \melody_lyrics_line_two
   >>
 

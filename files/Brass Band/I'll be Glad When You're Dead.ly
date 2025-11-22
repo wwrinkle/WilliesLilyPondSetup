@@ -1,0 +1,37 @@
+\version "2.24.4"
+\language "english"
+
+\include "../../templates/init.ly"
+
+tempoSetting = \tempo 4 = 180
+
+title = "I'll be Glad When You're Dead, You Rascal You"
+
+melody = {
+  \relative c' {
+    \time 4/4
+    \numericTimeSignature
+    \key f \major
+    \partial 2 f4 a |
+    \repeat volta 2 {
+      c2 c | c4 f, af af | f1 | r2 f4 a| \break
+      c2 c | c4 f, bf a | g1 | r2 f4 a | \section \break
+      c2 c | c r4 c | c bf bf a | bf2 f4 a | \break
+      c2 c | c4 f, af af | f1 | r2 f4 a |
+    }
+  }
+}
+
+harmony =
+\chordmode {
+  s2
+  \repeat volta 2 {
+    | f1~ | f2 c:7 | f1*4 | c1*2:7 |
+    f1 |f:7 | bf1 | bf:m
+    f1~ | f2 c:7 | f1*2
+  }
+}
+
+
+\include "../../templates/lead_sheet.ly"
+

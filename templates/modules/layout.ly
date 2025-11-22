@@ -7,16 +7,19 @@
   paper-width = 8.5\in
   top-margin = 0.25\in
   indent = 0\in
-  between-system-space = 1\in
-  between-system-padding = 1\in
-  ragged-last-bottom = ##t
-  ragged-bottom = ##t
-  ragged-right = ##f
+  % between-system-space = 1\in
+  % between-system-padding = 1\in
+  % ragged-last-bottom = ##t
+  % ragged-bottom = ##t
+  % ragged-right = ##f
   annotate-spacing = ##f
-  markup-system-spacing = #'((minimum-distance . 26))
-  system-system-spacing = #'(
-                              (minimum-distance . 15)
-                              (padding . 3))
+  markup-system-spacing = #`(
+                              (minimum-distance . ,topSpacing)
+                              )
+  system-system-spacing = #`(
+                              (minimum-distance . ,systemSpacing)
+                              (padding . 1)
+                              )
   line-width = 7.5\in
 }
 
@@ -44,8 +47,8 @@
   \override Score.SectionLabel.font-size = #4
   \override Score.MetronomeMark.font-size = #4
   \override Score.MetronomeMark.X-offset = #0
-  \override Score.MetronomeMark.Y-offset = #12
   \override StaffSpacing.stem-spacing-correction = #100
+  \override Score.JumpScript.direction = #UP
 
   \context {
     \Staff

@@ -3,16 +3,42 @@
 
 \include "./modules/index.ly"
 
+
+\paper {
+  annotate-spacing = #debug
+}
+
 \score {
+  \removeWithTag #'midi
   \new StaffGroup <<
     \leadSheetChords \harmony
-    \leadSheetMelody \melody \melody_lyrics \melody_lyrics_line_two
+    \leadSheetHarmonicRhythm \harmonicRhythm
+    \leadSheetMelody {
+      \tempoSetting
+      \melody
+    } \melody_lyrics \melody_lyrics_line_two
     \leadSheetBass \bass
   >>
-  \layout {}
-  \midi {
-    \tempoSetting
+  \layout {
+    \context {
+      \Score
+      \override VerticalAxisGroup.remove-first = ##t
+    }
   }
 }
 
+\score {
+
+  \removeWithTag #'layout
+  \unfoldRepeats
+  \new StaffGroup <<
+    \leadSheetChords \harmony
+    \leadSheetMelody { \tempoSetting \melody } \melody_lyrics \melody_lyrics_line_two
+    \leadSheetBass \bass
+  >>
+
+  \midi {
+    \formattedTempo
+  }
+}
 

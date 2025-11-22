@@ -1,0 +1,118 @@
+\version "2.24.4"
+\language "english"
+
+\include "../../templates/init.ly"
+
+tempoSetting = \tempo 4 = 150
+
+title = "Do Whatcha Wanna"
+composer = "Rebirth"
+debug = ##t
+
+topSpacing = 0
+systemSpacing = 0
+
+
+melody = {
+  \relative c' {
+    \time 4/4
+    \numericTimeSignature
+    \key ef \major
+    \repeat volta 2 {
+      \repeat volta 2 { r1 ^\markup { \huge "open" } | r4 bf'8 ^\markup { \huge "on cue" } bf c ef r c | } \break
+      \sectionBox "A"
+      \repeat volta 2 {
+
+        \volta 1 {
+          \repeat unfold 2  { <ef g,>1 | r4 bf8 bf c ef r c | } \break
+          <ef g,>1 | r4 bf8 bf c ef r c |
+          <<
+            {ef1~ | \override Glissando.style = #'trill \afterGrace  ef  \glissando  ef'4  ^\markup { \huge "to Intro" } }
+            \\
+            { g,,1( | gf) }
+          >> \break
+        }
+        \volta 2 \fine
+      }
+      \repeat volta 2 { s1*2 } \break
+      \sectionBox "B"
+      \repeat volta 4 {
+        ef'8 ^\markup { \huge "4x" } ef r4 df8 df r4 | c8 c r4 bf g~ |  g bf bf c | gf8 f ef4 r g~ | \break
+        g bf bf c | <df bf gf> r <c af f> <bf gf ef> | r1 |
+        \alternative {
+          \volta 1,2,3 {
+            r
+          }
+          \volta 4 {
+            r4 bf8 bf c ef r c ^\markup { \huge "to A" }   \break
+          }
+        }
+      }
+    }
+  }
+}
+
+bass = {
+  \relative c' {
+    \clef bass
+    \key ef \major
+
+    \repeat volta 2 {
+      \repeat volta 2 {
+        \sectionBox "Intro"
+        \bar ".|:" ef,,4. g8~ g4 bf | af4. c8~ c4 ef ^\markup { \huge "cont." } |
+      }
+      \repeat volta 2 {
+        \clef treble
+        r4 bf''8 bf c ef r c | ef1 | r4 bf8 bf c ef r c | ef1
+        r4 bf8 bf c ef r c | ef1~ | ef~ | ef |
+      }
+      \clef bass
+      \repeat volta 2 {
+        ef,,,4. g8~ g4 bf | af4. c8~ c4 ef ^\markup { \huge "cont." } |
+      }
+      \repeat volta 4 {
+        \sectionBox "B"
+        s1*7
+        \alternative {
+          \volta 1,2,3 {
+            s1
+          }
+          \volta 4 {
+            s1
+          }
+        }
+      }
+    }
+  }
+}
+
+
+harmony =
+\chordmode {
+  \repeat volta 2 {
+    \repeat volta 2 {
+      ef1 | af
+    }
+    \repeat volta 2 {
+      \repeat unfold 4 { ef1 | af }
+    }
+    \repeat volta 2 {
+      ef1 | af
+    }
+    \repeat volta 2 {
+      \repeat unfold 3 { ef1 | af1 } ef1
+      \alternative {
+        \volta 1,2,3 {
+          af
+        }
+        \volta 4{
+          af
+        }
+      }
+    }
+  }
+}
+
+\include "../../templates/lead_sheet_grand_staff.ly"
+

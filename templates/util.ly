@@ -2,12 +2,18 @@
 \language "english"
 
 slashNotation = #(define-music-function
-                  (i)
-                  (number?)
+                  (iterations duration)
+                  (number? ly:duration?)
                   #{
+                    #(if
+                      (null? duration)
+                      (set! duration
+                            (ly:make-duration 4 0 0)
+                            )
+                      )
                     \improvisationOn
                     \omit Stem
-                    \repeat unfold $i \absolute { \tag #'layout b'4 \tag #'midi r4 }
+                    \repeat unfold $iterations \absolute { \tag #'layout { b'$duration } \tag #'midi { r$duration } }
                     \improvisationOff
                     \undo \omit Stem
                   #})
@@ -84,3 +90,23 @@ improvisationOffStemDown = {
   \stemNeutral
   \improvisationOff
 }
+
+scoop = #(define-music-function
+          (note)
+          (ly:music?)
+          (let ((cleanNote (ly:music-deep-copy note)))
+            (ly:music-set-property! cleanNote 'articulations '())
+            #{
+              \once \override Slur.extra-offset = #'(-0.5 . -0.4)
+              \once \override Slur.rotation = #'(25 0 0)
+              \tag #'layout {
+                {
+                  \hideNotes
+                  \appoggiatura \transpose df c' {  $cleanNote }
+                  \unHideNotes
+                }
+                $note
+              }
+              \tag #'midi $note
+            #}))
+

@@ -1,27 +1,19 @@
 \version "2.24.4"
 \language "english"
 
-
-
-   (let* ((staff-space (ly:staff-symbol-staff-space grob))
-          (thickness (* staff-space 0.15))
-          (width (* staff-space 1.2))
-          (height (* staff-space 1.5)))
-     (grob-interpret-markup grob
-                            (markup #:translate (cons (* width -0.5) (* height -0.5))
-                                    #:draw-line (cons width height)
-                                    #:with-dimensions (cons 0 width) (cons 0 height)))))
-
-
-
 slashNotation = #(define-music-function
-                  (i)
-                  (number?)
+                  (iterations duration)
+                  (number? ly:duration?)
                   #{
-
+                    #(if
+                      (null? duration)
+                      (set! duration
+                            (ly:make-duration 4 0 0)
+                            )
+                      )
                     \improvisationOn
                     \omit Stem
-                    \repeat unfold $i r4
+                    \repeat unfold $iterations \absolute { \tag #'layout { b'$duration } \tag #'midi { r$duration } }
                     \improvisationOff
                     \undo \omit Stem
                   #})
@@ -98,3 +90,24 @@ improvisationOffStemDown = {
   \stemNeutral
   \improvisationOff
 }
+
+scoop = #(define-music-function
+          (note)
+          (ly:music?)
+          (let ((cleanNote (ly:music-deep-copy note)))
+          (ly:music-set-property! cleanNote 'articulations '())
+          #{
+            \once \override Slur.extra-offset = #'(-0.5 . -0.4)
+            \once \override Slur.rotation = #'(25 0 0)
+            \tag #'layout {
+              {
+                \hideNotes
+                \appoggiatura \transpose df c' {  $cleanNote }
+                \unHideNotes
+              }
+              $note
+              #(if slur #{ \laissezVibrer #})
+            }
+            \tag #'midi $note
+          #}))
+
