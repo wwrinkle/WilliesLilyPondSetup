@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
@@ -6,7 +6,7 @@
 title = "A Flower is a Lovesome Thing"
 composer = "Strayhorn"
 style = "Ballad"
-part_name = "C Part"
+partName = "C Part"
 
 melody = {
   \relative c' {
@@ -42,7 +42,7 @@ melody = {
   }
 }
 
-melody_lyrics = \lyricmode  {
+melodyLyrics = \lyricmode  {
   \repeat unfold 15 _ A
   flow -- er is a love -- some thing, a lus -- cious liv -- ing love -- some thing. A
   daf -- fo -- dil, a rose, no mat -- ter where it grows, is
@@ -54,7 +54,7 @@ melody_lyrics = \lyricmode  {
   flow -- er is a love -- some thing.
 }
 
-melody_lyrics_line_two = \lyricmode {
+melodyLyricsLineTwo = \lyricmode {
   \repeat unfold 16 _
   flow -- er is the heart of spring that makes a roll -- ing hill -- side sing. The
   gen -- tel winds that blow, blow gent --ly for they know a

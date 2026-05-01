@@ -1,10 +1,10 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 title = \markup {
   \column {
     \fill-line {
-      \fontsize #-1 #part_name \null \null
+      \fontsize #-1 #partName \null \null
     }
     \fill-line {
       \null

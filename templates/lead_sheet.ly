@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "./modules/index.ly"
@@ -8,18 +8,14 @@
 }
 
 \score {
-
   \removeWithTag #'midi
   <<
     \leadSheetChords \harmony
     \leadSheetHarmonicRhythm \harmonicRhythm
-    \leadSheetMelody { \tempoSetting \melody} \melody_lyrics \melody_lyrics_line_two
+    \leadSheetMelody { \tempoSetting \melody} \melodyLyrics \melodyLyricsLineTwo
   >>
-
   \layout {
   }
-
-
 }
 
 \score {
@@ -27,7 +23,7 @@
   \unfoldRepeats
   <<
     \leadSheetChords \harmony
-    \leadSheetMelody { \tempoSetting \melody} \melody_lyrics \melody_lyrics_line_two
+    \leadSheetMelody { \tempoSetting \melody} \melodyLyrics \melodyLyricsLineTwo
   >>
   \midi {
     \formattedTempo

@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
@@ -6,7 +6,7 @@
 title = "A Fine Romance"
 composer = "Kern/Fields"
 style = "Medium"
-part_name = "C Part"
+partName = "C Part"
 
 melody = {
   \relative c' {
@@ -44,7 +44,7 @@ harmony =
   c:m7 b:7 | bf:m7 ef:7 | af1:6 | bf2:m7 ef:7 |
 }
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   A fine ro -- mance, with no kiss -- es. A
   fine ro -- mance, my friend, this is. We
   should be like a cou -- ple of hot to -- mat -toes. But
@@ -52,7 +52,7 @@ melody_lyrics = \lyricmode {
   ne -- ver mussed a crease in your blue serge pants. I ne -- ver had the
   chance. This is a fine ro -- mance.
 }
-melody_lyrics_line_two = \lyricmode {
+melodyLyricsLineTwo = \lyricmode {
   _ fine ro -- mance, you won't nest -- le. A
   fine ro -- mance, you won't wrest -- le. I've
 }

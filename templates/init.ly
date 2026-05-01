@@ -1,13 +1,13 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 title = ""
 sub_title = ""
 composer = ""
 style = ""
-part_name = ""
-melody_lyrics = \lyricmode {  }
-melody_lyrics_line_two = \lyricmode {  }
+partName = ""
+melodyLyrics = \lyricmode {  }
+melodyLyricsLineTwo = \lyricmode {  }
 
 melody = \relative c' { s }
 bass = \relative c' { s }
@@ -17,5 +17,6 @@ tempoSetting = ##f
 debug  = ##f
 topSpacing = 26
 systemSpacing = 15
+basicDistance = 12
 
 \include "./util.ly"

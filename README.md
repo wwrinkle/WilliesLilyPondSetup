@@ -26,7 +26,7 @@ To use a template 2 files must be included:
 ### Example
 
 ```ly
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
@@ -34,7 +34,7 @@ To use a template 2 files must be included:
 title = "My Great Tune"
 composer = "John Doe"
 style = "Salsa Picante"
-part_name = \markup { Kazoo in C\flat }
+partName = \markup { Kazoo in C\flat }
 
 melody = {
   \relative c' {
