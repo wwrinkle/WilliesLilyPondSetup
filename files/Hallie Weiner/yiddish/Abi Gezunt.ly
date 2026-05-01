@@ -1,11 +1,11 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
 
 title = "Abi Gezunt"
 composer = "Molly Piccon/Abraham Ellstein"
-part_name = "C Part"
+partName = "C Part"
 
 aSection = \relative c' {
   d4 f a4. a8 | c4 bf \acciaccatura bf8 a4 g8 g | d4 e f4. f8 | a4 g \acciaccatura g8 f4 e8 e | \break
@@ -71,14 +71,14 @@ abi_gezunt_tag_line = \lyricmode {
   A -- bi ge -- zunt, ken men glik -- lech
 }
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   % empty intro lyrics
   \repeat unfold 16 _
   A bi -- sl zun, a bi -- sl re -- gn. A ru -- ik ort dem kip tzu ley -- gn.
   \abi_gezunt_tag_line zayne. A
 }
 
-melody_lyrics_line_two = \lyricmode {
+melodyLyricsLineTwo = \lyricmode {
   \repeat unfold 17 _
   shuch, a zok, a kleyd on la -- tes, in ke -- she -- ne a dray, fir zlo -- tes.
   \abi_gezunt_tag_line \repeat unfold 2 _ zayne. Di luft iz

@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
@@ -6,7 +6,7 @@
 title = "Bei Mir Bistu Shein"
 composer = "Jacobs/Secunda"
 style = "Swing"
-part_name = "C Part"
+partName = "C Part"
 
 aSection = \relative c' {
   af'2 g8 f r af~ | af2 r4 c, | af'2 g8 f r af~ | af2 r4 af |
@@ -55,7 +55,7 @@ melody = \relative c' {
   }
 }
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   Of all the boys I've known, and I've known some, Un -- til I first met you, I was
   lone -- some, And when you came in sight, dear, my heart grew light, And this
   old world seemed new to me. You're real -- ly \repeat unfold 6 _ Bei
@@ -67,7 +67,7 @@ melody_lyrics = \lyricmode {
   kiss me and say you un -- der -- stand.
 }
 
-melody_lyrics_line_two = \lyricmode {
+melodyLyricsLineTwo = \lyricmode {
   \repeat unfold 3 _ swell, I have to ad -- mit you, Des -- erve ex -- press -- ions that reall -- y fit you, And so I've
   racked my brain, hop -- ing to ex -- plain All the
   \repeat unfold 9 _ things that you do to me

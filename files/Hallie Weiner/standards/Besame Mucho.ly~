@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
@@ -6,7 +6,7 @@
 title = "Besame Mucho"
 composer = "Velazquez/Skylar"
 style = "Rumba"
-part_name = "C Part"
+partName = "C Part"
 
 melody = \relative c' {
   \time 4/4
@@ -31,7 +31,7 @@ besame_line = \lyricmode {
   Bés -- a -- me, bés -- a -- me mu -- cho,
 }
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   \besame_line
   Each time I cling to your kiss I hear mus -- ic di -- vine.
   \besame_line
@@ -55,7 +55,7 @@ a_section_line_two = \lyricmode {
   Que ten -- go mie -- do a per -- der -- te, per -- der -- te después.
 }
 
-melody_lyrics_line_two = \lyricmode {
+melodyLyricsLineTwo = \lyricmode {
   \empty_besame_line
   \a_section_line_one
   \empty_besame_line

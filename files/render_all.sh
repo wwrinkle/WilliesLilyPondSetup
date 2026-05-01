@@ -6,5 +6,5 @@ find . -name "*.ly" -print0 | while IFS= read -r -d '' file; do
   directory=$(dirname "$file")
 
   # Run lilypond, specifying the output directory
-  /home/willie/Projects/lilypond/_source/lilypond-2.24.4/bin/lilypond -o "$directory" "$file"
+  /home/willie/Projects/lilypond/_source/lilypond-2.26.0/bin/lilypond -o "$directory" "$file"
 done

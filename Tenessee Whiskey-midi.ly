@@ -15,17 +15,17 @@ trackAchannelA = {
 
 
   \key ees \major
-    
+
   \set Staff.instrumentName = "Tennessee Whiskey Dillon/Hargrove"
-  
-  % [TEXT_EVENT] creator: 
-  
-  % [TEXT_EVENT] LilyPond 2.24.4               
-  
-  \time 12/8 
-  
-  \tempo 4 = 90 
-  \skip 8*51 
+
+  % [TEXT_EVENT] creator:
+
+  % [TEXT_EVENT] LilyPond 2.26.0
+
+  \time 12/8
+
+  \tempo 4 = 90
+  \skip 8*51
 }
 
 trackA = <<
@@ -34,17 +34,17 @@ trackA = <<
 
 
 trackBchannelA = {
-  \skip 8*51 
+  \skip 8*51
 }
 
 trackBchannelB = \relative c {
-  r4. <ees' g bes >8*5 <aes c ees >8 <ees g bes >2. <f aes ees' c >1. 
+  r4. <ees' g bes >8*5 <aes c ees >8 <ees g bes >2. <f aes ees' c >1.
   | % 3
-  <aes c f ees > 
+  <aes c f ees >
   | % 4
-  <ees g bes > 
+  <ees g bes >
   | % 5
-  
+
 }
 
 trackB = <<
@@ -54,33 +54,33 @@ trackB = <<
 
 
 trackCchannelA = {
-  
+
   \set Staff.instrumentName = ":melody"
-  
+
   % [INSTRUMENT_NAME] acoustic grand
-  
+
 
   \key ees \major
-  \skip 8*51 
+  \skip 8*51
 }
 
 trackCchannelB = {
-  
+
   \set Staff.instrumentName = ":bass"
-  
+
   % [INSTRUMENT_NAME] acoustic bass
-  
+
 
   \key ees \major
-  \skip 4. 
+  \skip 4.
 }
 
 trackCchannelC = \relative c {
-  bes'8 c ees g2. r4. 
+  bes'8 c ees g2. r4.
   | % 2
-  g8 f ees g f8*5 r2 g8 g ees2. r2 
+  g8 f ees g f8*5 r2 g8 g ees2. r2
   | % 4
-  g8 g ees2. 
+  g8 g ees2.
 }
 
 trackC = <<

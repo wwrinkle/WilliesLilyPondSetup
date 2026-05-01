@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
@@ -6,7 +6,7 @@
 title = "C'est Si Bon"
 composer = "Hornez/Betti"
 style = "Medium"
-part_name = "C Part"
+partName = "C Part"
 
 melody = {
   \relative c' {
@@ -57,7 +57,7 @@ harmony =
   ef1:6 | f2:m7 bf:7 | ef1:6 | f2:m7 bf:7 |
 }
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   % empty intro lyrics
   \repeat unfold 16 _
   C'est si bon De par -- tir n'im -- porte où Bras des -- sus, bras des -- sous

@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
@@ -7,7 +7,7 @@ title = "Chanson de Delphine"
 sub_title = "(You Must Believe in Spring)"
 composer = "Legrand"
 style = "Ballad"
-part_name = "C Part"
+partName = "C Part"
 
 a_section = {
   \relative c' {
@@ -62,7 +62,7 @@ melody = {
   }
 }
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   \repeat unfold 3 _
   Je ne sais rien de lui, et pour -- tant je le vois
   Son nom m'est fa -- mil -- ier, et je con -- nais sa voix

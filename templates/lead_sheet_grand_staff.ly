@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "./modules/index.ly"
@@ -16,7 +16,7 @@
     \leadSheetMelody {
       \tempoSetting
       \melody
-    } \melody_lyrics \melody_lyrics_line_two
+    } \melodyLyrics \melodyLyricsLineTwo
     \leadSheetBass \bass
   >>
   \layout {
@@ -28,15 +28,13 @@
 }
 
 \score {
-
   \removeWithTag #'layout
   \unfoldRepeats
   \new StaffGroup <<
     \leadSheetChords \harmony
-    \leadSheetMelody { \tempoSetting \melody } \melody_lyrics \melody_lyrics_line_two
+    \leadSheetMelody { \tempoSetting \melody } \melodyLyrics \melodyLyricsLineTwo
     \leadSheetBass \bass
   >>
-
   \midi {
     \formattedTempo
   }

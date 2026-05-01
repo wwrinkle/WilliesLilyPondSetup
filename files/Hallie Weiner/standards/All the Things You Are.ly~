@@ -1,11 +1,11 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
 
 title = "All the Things You Are"
 composer = "Kern/Hammerstein"
-part_name = "C Part"
+partName = "C Part"
 
 melody = {
   \relative c' {
@@ -24,7 +24,7 @@ melody = {
   }
 }
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   You are the prom -- issed kiss of spring -- time That
   makes the lone -- ly win -- ter seem long.
   You are the breath -- less hush of eve -- ning That

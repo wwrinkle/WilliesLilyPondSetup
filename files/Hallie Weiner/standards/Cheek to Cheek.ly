@@ -1,11 +1,11 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
 
 title = "Cheek to Cheek"
 composer = "Irving Berlin"
-part_name = "C Part"
+partName = "C Part"
 
 a_section = {
   \relative c' {
@@ -85,7 +85,7 @@ harmony =
 }
 
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   Hea -- ven, I'm in hea -- ven, And my
   heart beats so that I can hard -- ly speak, And I
   seem to find the hap -- pi -- ness I seek When we're
@@ -99,7 +99,7 @@ melody_lyrics = \lyricmode {
   seem to find the hap -- pi -- ness I seek When we're
   out to -- ge -- ther dan -- cing cheek to cheek
 }
-melody_lyrics_line_two = \lyricmode {
+melodyLyricsLineTwo = \lyricmode {
   % empty spaces because verses match here
   \repeat unfold 6 _ And the
   cares that hung a -- round me through the week Seem to

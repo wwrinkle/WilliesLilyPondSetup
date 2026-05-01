@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
@@ -6,7 +6,7 @@
 title = "A Foggy Day"
 composer = "Gershwin"
 style = "Medium"
-part_name = "C Part"
+partName = "C Part"
 
 melody = {
   \relative c' {
@@ -31,7 +31,7 @@ melody = {
   }
 }
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   A fog -- gy day, in Lon -- don town
   Had me low, and had me down
   I viewed the morn -- ing, with a -- larm,

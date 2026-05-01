@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../templates/init.ly"
@@ -7,11 +7,11 @@ tempoSetting = \tempo 4 = 150
 
 title = "Do Whatcha Wanna"
 composer = "Rebirth"
-debug = ##t
+debug = ##f
 
 topSpacing = 0
 systemSpacing = 0
-
+basicDistance = 15
 
 melody = {
   \relative c' {

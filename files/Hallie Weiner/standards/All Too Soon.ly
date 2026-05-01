@@ -1,11 +1,11 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
 
 title = "All Too Soon"
 composer = "Ellington/Sigman"
-part_name = "C Part"
+partName = "C Part"
 
 melody = {
   \relative c' {
@@ -27,7 +27,7 @@ melody = {
   }
 }
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   All too soon we had to part The mo -- ment you had touched my heart And
   with you went my dream All too soon.
   All too sweet was our af -- fair And you put all the sweet -- ness _ there

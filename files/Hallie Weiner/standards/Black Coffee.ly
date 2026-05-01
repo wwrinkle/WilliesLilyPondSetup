@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 \language "english"
 
 \include "../../../templates/init.ly"
@@ -6,7 +6,7 @@
 title = "Black Coffee"
 composer = "Webster/Burke"
 style = "Blues"
-part_name = "C Part"
+partName = "C Part"
 
 a_section_line_one = \relative c' {
   c'8 c c g bf g4. | c8 c c g bf g4. | \break
@@ -55,7 +55,7 @@ harmony =
   d1:m7 | g:sus9 | \repeat unfold 2 { c2:7.9+ df:7.9+ }
 }
 
-melody_lyrics = \lyricmode {
+melodyLyrics = \lyricmode {
   I'm fee -- l'in migh -- ty lone -- some I have -- n't slept a wink
   I walk the foor from nine to four and in be -- tween I drink Black
   cof -- fee Love's a hand -- me -- down brew I'll
@@ -70,7 +70,7 @@ melody_lyrics = \lyricmode {
 
 }
 
-melody_lyrics_line_two = \lyricmode {
+melodyLyricsLineTwo = \lyricmode {
   _
   tal -- kin to the sha -- dow One -- _ o' -- clock till four
   And Lord, how slow the mo -- ments go and all I do is pour Black
