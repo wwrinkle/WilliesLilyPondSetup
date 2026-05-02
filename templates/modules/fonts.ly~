@@ -1,17 +1,15 @@
 \version "2.26.0"
 \language "english"
 
-#ly:font-config-display-fonts
-#(ly:font-config-add-directory "../../")
+% #ly:font-config-display-fonts
+#(ly:font-config-add-directory "../../fonts")
 
 \paper {
-  #(define fonts
-     (set-global-fonts
-       #:music "lv-goldenage"
-      #:roman "GoldenAge"
-      #:sans "GoldenAge"
-      #:factor (/ staff-height pt 20)
-      ))
+  
+  property-defaults.fonts.roman = "GoldenAge"
+  property-defaults.fonts.sans = "GoldenAge"
+  property-defaults.fonts.music = "lv-goldenage"
+  property-defaults.fonts.staff-height = 20
 }
 
 % variables to be used when defining chord exceptions

@@ -1,8 +1,8 @@
 \version "2.26.0"
 \language "english"
 
-% #ly:font-config-display-fonts
-% #(ly:font-config-add-directory "../../fonts")
+#ly:font-config-display-fonts
+#(ly:font-config-add-directory "../../fonts")
 
 \paper {
   property-defaults.fonts.roman = "GoldenAge"

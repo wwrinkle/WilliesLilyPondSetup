@@ -4,7 +4,7 @@ Big ups to [LilyPond](https://lilypond.org/), it's a lot of fun to play with.
 
 ---
 
-This repo serves to demonstrate how I extend LilyPond to create and style Lead Sheets.
+This repo serves to demonstrate how I extend LilyPond to create and styled Lead Sheets.
 
 Shared styling and logic are found in `/templates`.
 
