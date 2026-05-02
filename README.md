@@ -55,6 +55,14 @@ harmony =
 - [A Fine Romance](/files/Hallie%20Weiner/standards/A%20Fine%20Romance.pdf)
 - [A Flower Is a Lovesome thing](/files/Hallie%20Weiner/standards/A%20Flower%20is%20a%20Lovesome%20Thing.pdf)
 
+### Custom Fonts
+
+To add custom fonts, lilypond seems to only read them from its internal font dir.
+
+```
+ln -s /home/willie/Projects/WilliesLilyPondSetup/fonts/*/otf/* /usr/lib/lilypond-2.26.0/share/lilypond/2.26.0/fonts/otf/
+```
+
 ---
 
 More to come.
