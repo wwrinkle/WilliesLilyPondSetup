@@ -1,7 +1,7 @@
 \version "2.26.0"
 \language "english"
 
-\include "../../../templates/init.ly"
+\include "../../templates/init.ly"
 
 title = "A Flower is a Lovesome Thing"
 composer = "Strayhorn"
@@ -79,4 +79,4 @@ harmony = \chordmode {
   \aSectionHarmony
 }
 
-\include "../../../templates/lead_sheet.ly"
+\include "../../templates/lead_sheet.ly"

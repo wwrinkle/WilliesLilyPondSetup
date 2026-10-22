@@ -1,7 +1,7 @@
 \version "2.26.0"
 \language "english"
 
-\include "../../../templates/init.ly"
+\include "../../templates/init.ly"
 
 title = "A Fine Romance"
 composer = "Kern/Fields"
@@ -57,4 +57,4 @@ melodyLyricsLineTwo = \lyricmode {
   fine ro -- mance, you won't wrest -- le. I've
 }
 
-\include "../../../templates/lead_sheet.ly"
+\include "../../templates/lead_sheet.ly"

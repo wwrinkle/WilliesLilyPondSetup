@@ -14,7 +14,7 @@ Shared styling and logic are found in `/templates`.
 - `lead_sheet_grand_staff.ly` includes modules and creates a staff group containing a Melody Staff and a Bass Staff.
 - `util.ly` defines custom music functions.
 
-Examples can be found in `/files`.
+Examples can be found in `/examples`. (`/files` is a private submodule.)
 
 ### File Format
 
@@ -29,7 +29,7 @@ To use a template 2 files must be included:
 \version "2.26.0"
 \language "english"
 
-\include "../../../templates/init.ly"
+\include "../../templates/init.ly"
 
 title = "My Great Tune"
 composer = "John Doe"
@@ -47,13 +47,13 @@ harmony =
   c1
 }
 
-\include "../../../templates/lead_sheet.ly"
+\include "../../templates/lead_sheet.ly"
 ```
 
 ### Lead Sheets
 
-- [A Fine Romance](/files/Hallie%20Weiner/standards/A%20Fine%20Romance.pdf)
-- [A Flower Is a Lovesome thing](/files/Hallie%20Weiner/standards/A%20Flower%20is%20a%20Lovesome%20Thing.pdf)
+- [A Fine Romance](/examples/standards/A%20Fine%20Romance.pdf)
+- [A Flower Is a Lovesome thing](/examples/standards/A%20Flower%20is%20a%20Lovesome%20Thing.pdf)
 
 ### Custom Fonts
 
