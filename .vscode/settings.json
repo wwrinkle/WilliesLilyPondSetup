@@ -1,40 +1,38 @@
 {
-  // VSLilyPond: compile, errors as you type, MIDI input and playback.
+  // VSLilyPond Plus (https://github.com/wwrinkle/VSLilyPond-Plus): compile,
+  // format on save, errors as you type, MIDI input and playback.
   // "lilypond" resolves to the 2.26 symlink in /usr/local/bin.
-  "vslilypond.general.pathToLilypond": "lilypond",
-  "vslilypond.intellisense.enabled": true,
-  "vslilypond.compilation.compileOnSave": true,
+  "vslilypondPlus.general.pathToLilypond": "lilypond",
+  "vslilypondPlus.intellisense.enabled": true,
+  "vslilypondPlus.compilation.compileOnSave": true,
   // Compile whichever file was saved (output lands next to it).
-  "vslilypond.compilation.compileMainFileOnSave": false,
+  "vslilypondPlus.compilation.compileMainFileOnSave": false,
   // Point-and-click links in the PDF power two-way click in the preview.
-  "vslilypond.compilation.additionalCommandLineArguments": "-dpoint-and-click",
-  "vslilypond.midiInput.relativeMode": true,
-  "vslilypond.midiInput.chordMode": false,
-  "vslilypond.midiInput.accidentals": "sharps",
+  "vslilypondPlus.compilation.additionalCommandLineArguments": "-dpoint-and-click",
+  // Reformats the editor text with python-ly just before saving.
+  "vslilypondPlus.formatting.formatOnSave": true,
+  "vslilypondPlus.midiInput.input": "SE61 MIDI1",
+  "vslilypondPlus.midiInput.relativeMode": true,
+  "vslilypondPlus.midiInput.chordMode": false,
+  "vslilypondPlus.midiInput.accidentals": "sharps",
 
   // PDF preview (opens beside the .ly file; click notes to jump to source).
   "lilypond-pdf-preview.general.scale": "page-width",
   "lilypond-pdf-preview.pointAndClick.highlightDuration": 3000,
+  // Open PDFs in the LilyPond viewer here (user settings send them to LaTeX Workshop).
+  "workbench.editorAssociations": {
+    "*.pdf": "lilypond.pdf.preview"
+  },
 
-  // Formatter is for manual "Format Document" only. Don't use it on save:
-  // it formats the file on disk (the pre-save text) and overwrites your edits.
+  // Keep VS Code's own format-on-save off; VSLilyPond Plus handles it.
   "[lilypond]": {
-    "editor.defaultFormatter": "lhl2617.lilypond-formatter",
     "editor.formatOnSave": false
   },
-  // Reformat after each save instead. This also replaces the user-level
-  // run-on-save command, which compiled with an old LilyPond path.
+  // Disable the user-level Run On Save command in this repo.
   "emeraldwalk.runonsave": {
-    "commands": [
-      {
-        "match": "\\.ly$",
-        "isAsync": false,
-        "cmd": "ly reformat -i \"${file}\""
-      }
-    ]
+    "commands": []
   },
 
   "cSpell.words": ["chordmode"],
-  "workbench.colorTheme": "Visual Studio Dark",
-  "vslilypond.midiInput.input": "SE61 MIDI1"
+  "workbench.colorTheme": "Visual Studio Dark"
 }
