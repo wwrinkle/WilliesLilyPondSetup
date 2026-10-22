@@ -1,13 +1,40 @@
 {
+  // VSLilyPond: compile, errors as you type, MIDI input and playback.
+  // "lilypond" resolves to the 2.26 symlink in /usr/local/bin.
+  "vslilypond.general.pathToLilypond": "lilypond",
+  "vslilypond.intellisense.enabled": true,
+  "vslilypond.compilation.compileOnSave": true,
+  // Compile whichever file was saved (output lands next to it).
+  "vslilypond.compilation.compileMainFileOnSave": false,
+  // Point-and-click links in the PDF power two-way click in the preview.
+  "vslilypond.compilation.additionalCommandLineArguments": "-dpoint-and-click",
+  "vslilypond.midiInput.relativeMode": true,
+  "vslilypond.midiInput.chordMode": false,
+  "vslilypond.midiInput.accidentals": "sharps",
+
+  // PDF preview (opens beside the .ly file; click notes to jump to source).
+  "lilypond-pdf-preview.general.scale": "page-width",
+  "lilypond-pdf-preview.pointAndClick.highlightDuration": 3000,
+
+  // Formatter is for manual "Format Document" only. Don't use it on save:
+  // it formats the file on disk (the pre-save text) and overwrites your edits.
+  "[lilypond]": {
+    "editor.defaultFormatter": "lhl2617.lilypond-formatter",
+    "editor.formatOnSave": false
+  },
+  // Reformat after each save instead. This also replaces the user-level
+  // run-on-save command, which compiled with an old LilyPond path.
   "emeraldwalk.runonsave": {
     "commands": [
       {
         "match": "\\.ly$",
-        "isAsync": true,
-        "cmd": "echo 'formatting ${file}' && ly reformat -i \"${file}\" && echo 'compiling ${file}' && lilypond --output=\"$(dirname \"${file}\")\" \"${file}\""
+        "isAsync": false,
+        "cmd": "ly reformat -i \"${file}\""
       }
     ]
   },
+
   "cSpell.words": ["chordmode"],
-  "workbench.colorTheme": "Visual Studio Dark"
+  "workbench.colorTheme": "Visual Studio Dark",
+  "vslilypond.midiInput.input": "SE61 MIDI1"
 }
