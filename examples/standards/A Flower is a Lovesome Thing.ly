@@ -15,7 +15,7 @@ melody = {
     \key df \major
 
     \sectionBox Intro
-    \slashNotation 15 r8 f8 \break
+    \slashNotation 15 4 r8 f8 \break
 
     \repeat volta 2 {
       \sectionBox "A"
