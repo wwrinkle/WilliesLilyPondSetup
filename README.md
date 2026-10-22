@@ -20,8 +20,8 @@ Examples can be found in `/files`.
 
 To use a template 2 files must be included:
 
-- `/templates/init.ly`
-- `/templates/lead_sheet.ly` or `/template/lead_sheet_grand_staff.ly`
+- `/templates/init.ly` before the music
+- `/templates/lead_sheet.ly` or `/template/lead_sheet_grand_staff.ly` after the music
 
 ### Example
 
