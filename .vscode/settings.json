@@ -28,10 +28,6 @@
   "[lilypond]": {
     "editor.formatOnSave": false
   },
-  // Disable the user-level Run On Save command in this repo.
-  "emeraldwalk.runonsave": {
-    "commands": []
-  },
 
   "cSpell.words": ["chordmode"],
   "workbench.colorTheme": "Visual Studio Dark"
