@@ -31,4 +31,8 @@
       g2 bf~ | bf e, | f1 | r \fine
     }
   >>
+  \layout { }
+  \midi {
+    \tempo 4 = 120
+  }
 }
