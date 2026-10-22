@@ -1,6 +1,6 @@
 {
   // VSLilyPond Plus isn't on the Marketplace: ./install.sh installs it from
   // https://github.com/wwrinkle/VSLilyPond-Plus/releases/latest
-  "recommendations": ["lhl2617.lilypond-pdf-preview", "jeandeaual.lilypond-syntax"],
-  "unwantedRecommendations": ["lhl2617.vslilypond", "lhl2617.lilypond-formatter"]
+  "recommendations": ["jeandeaual.lilypond-syntax"],
+  "unwantedRecommendations": ["lhl2617.vslilypond", "lhl2617.lilypond-formatter", "lhl2617.lilypond-pdf-preview"]
 }

@@ -19,10 +19,10 @@
   "vslilypondPlus.midiInput.chordMode": false,
 
   // PDF preview (opens beside the .ly file; click notes to jump to source).
-  "lilypond-pdf-preview.general.scale": "page-width",
-  "lilypond-pdf-preview.pointAndClick.highlightDuration": 3000,
+  "vslilypondPlus.pdfPreview.general.scale": "page-width",
+  "vslilypondPlus.pdfPreview.pointAndClick.highlightDuration": 3000,
   "workbench.editorAssociations": {
-    "*.pdf": "lilypond.pdf.preview"
+    "*.pdf": "vslilypondPlus.pdfPreview"
   },
 
   // Keep VS Code's own format-on-save off; VSLilyPond Plus handles it.

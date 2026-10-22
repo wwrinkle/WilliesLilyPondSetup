@@ -73,7 +73,7 @@ After cloning, run:
 It sets up what doesn't come with the repo, and is safe to rerun:
 
 - **Checks** for LilyPond 2.26+ and `python3`. It doesn't install them; use your own LilyPond.
-- **VS Code extensions:** installs [VSLilyPond Plus](https://github.com/wwrinkle/VSLilyPond-Plus) from its latest GitHub release (it isn't on the Marketplace), plus the LilyPond PDF Preview, Syntax and Snippets extensions. It removes the original VSLilyPond and LilyPond Formatter, which VSLilyPond Plus replaces. It never downgrades a newer VSLilyPond Plus.
+- **VS Code extensions:** installs [VSLilyPond Plus](https://github.com/wwrinkle/VSLilyPond-Plus) from its latest GitHub release (it isn't on the Marketplace), plus the LilyPond Syntax and Snippets extensions. It removes the original VSLilyPond, LilyPond Formatter and LilyPond PDF Preview, which VSLilyPond Plus replaces (the PDF preview is built in). It never downgrades a newer VSLilyPond Plus.
 - **Private scores:** checks out the `files` submodule if you have access, and skips it otherwise.
 - **`--fonts`:** copies the LV GoldenAge music font into your LilyPond install, so `-I` isn't needed on the command line. It prints a `sudo` command if that folder isn't writable.
 

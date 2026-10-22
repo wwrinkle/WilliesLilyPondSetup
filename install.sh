@@ -12,9 +12,10 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FONT_DIR="$REPO_DIR/templates/fonts/lv-goldenage"
 EXT_ID="wwrinkle.vslilypond-plus"
 EXT_RELEASES="https://api.github.com/repos/wwrinkle/VSLilyPond-Plus/releases/latest"
-EXT_DEPS=(jeandeaual.lilypond-syntax lhl2617.lilypond-pdf-preview lhl2617.lilypond-snippets)
-# replaced by VSLilyPond Plus (the formatter's format-on-save overwrites unsaved edits)
-EXT_CONFLICTS=(lhl2617.vslilypond lhl2617.lilypond-formatter)
+EXT_DEPS=(jeandeaual.lilypond-syntax lhl2617.lilypond-snippets)
+# replaced by VSLilyPond Plus (the formatter's format-on-save overwrites unsaved edits;
+# the PDF preview is built in since 1.11.0)
+EXT_CONFLICTS=(lhl2617.vslilypond lhl2617.lilypond-formatter lhl2617.lilypond-pdf-preview)
 MIN_LILYPOND="2.26.0"
 
 INSTALL_FONTS=false
@@ -67,13 +68,6 @@ else
   INSTALLED="$(code --list-extensions --show-versions 2>/dev/null)"
   installed_version() { printf '%s\n' "$INSTALLED" | grep -i "^$1@" | head -n1 | cut -d@ -f2; }
 
-  for ext in "${EXT_CONFLICTS[@]}"; do
-    if [ -n "$(installed_version "$ext")" ]; then
-      echo "  removing $ext (replaced by VSLilyPond Plus)"
-      run code --uninstall-extension "$ext" >/dev/null
-    fi
-  done
-
   for ext in "${EXT_DEPS[@]}"; do
     if [ -n "$(installed_version "$ext")" ]; then
       ok "$ext"
@@ -107,6 +101,15 @@ else
       warn "installing $EXT_ID failed"
     fi
   fi
+
+  # after the upgrade: VSLilyPond Plus before 1.11.0 depends on the old PDF preview
+  for ext in "${EXT_CONFLICTS[@]}"; do
+    if [ -n "$(installed_version "$ext")" ]; then
+      echo "  removing $ext (replaced by VSLilyPond Plus)"
+      run code --uninstall-extension "$ext" >/dev/null 2>&1 ||
+        warn "couldn't remove $ext; uninstall it in VS Code"
+    fi
+  done
 fi
 
 # ---------------------------------------------------------------- private scores
