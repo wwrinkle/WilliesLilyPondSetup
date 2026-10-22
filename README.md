@@ -58,6 +58,24 @@ harmony =
 ### Requirements
 
 - [LilyPond](https://lilypond.org/download.html) 2.26 or newer, on your `PATH` as `lilypond`.
+- Optional: [VS Code](https://code.visualstudio.com/) and `python3` (for format on save).
+
+### Install
+
+After cloning, run:
+
+```
+./install.sh            # set up everything below
+./install.sh --fonts    # also copy the music font into LilyPond (see Fonts)
+./install.sh --dry-run  # show what it would do
+```
+
+It sets up what doesn't come with the repo, and is safe to rerun:
+
+- **Checks** for LilyPond 2.26+ and `python3`. It doesn't install them; use your own LilyPond.
+- **VS Code extensions:** installs [VSLilyPond Plus](https://github.com/wwrinkle/VSLilyPond-Plus) from its latest GitHub release (it isn't on the Marketplace), plus the LilyPond PDF Preview, Syntax and Snippets extensions. It removes the original VSLilyPond and LilyPond Formatter, which VSLilyPond Plus replaces. It never downgrades a newer VSLilyPond Plus.
+- **Private scores:** checks out the `files` submodule if you have access, and skips it otherwise.
+- **`--fonts`:** copies the LV GoldenAge music font into your LilyPond install, so `-I` isn't needed on the command line. It prints a `sudo` command if that folder isn't writable.
 
 ### Fonts
 
@@ -72,7 +90,7 @@ bundled in `/templates/fonts` (SIL Open Font License).
   ```
 
   If you also pass `-o`, give `-I` an absolute path (LilyPond changes into the output folder first).
-  Or copy the `lv-goldenage-*.otf` files into your LilyPond install's `share/lilypond/<version>/fonts/otf/` folder once, and skip `-I`.
+  Or copy the `lv-goldenage-*.otf` files into your LilyPond install's `share/lilypond/<version>/fonts/otf/` folder once (`./install.sh --fonts` does this), and skip `-I`.
 
 Without either, scores still compile, but with LilyPond's default music font (Emmentaler) and a warning.
 
