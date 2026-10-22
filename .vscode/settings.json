@@ -1,25 +1,26 @@
 {
   // VSLilyPond Plus (https://github.com/wwrinkle/VSLilyPond-Plus): compile,
   // format on save, errors as you type, MIDI input and playback.
-  // "lilypond" resolves to the 2.26 symlink in /usr/local/bin.
-  "vslilypondPlus.general.pathToLilypond": "lilypond",
+  // Machine-specific settings (LilyPond path, MIDI device, sharps/flats)
+  // belong in your user settings, not here.
   "vslilypondPlus.intellisense.enabled": true,
   "vslilypondPlus.compilation.compileOnSave": true,
   // Compile whichever file was saved (output lands next to it).
   "vslilypondPlus.compilation.compileMainFileOnSave": false,
   // Point-and-click links in the PDF power two-way click in the preview.
   "vslilypondPlus.compilation.additionalCommandLineArguments": "-dpoint-and-click",
+  // Lets LilyPond find the bundled LV GoldenAge music font (see templates/fonts).
+  "vslilypondPlus.compilation.includePaths": [
+    "${workspaceFolder}/templates/fonts/lv-goldenage"
+  ],
   // Reformats the editor text with python-ly just before saving.
   "vslilypondPlus.formatting.formatOnSave": true,
-  "vslilypondPlus.midiInput.input": "SE61 MIDI1",
   "vslilypondPlus.midiInput.relativeMode": true,
   "vslilypondPlus.midiInput.chordMode": false,
-  "vslilypondPlus.midiInput.accidentals": "sharps",
 
   // PDF preview (opens beside the .ly file; click notes to jump to source).
   "lilypond-pdf-preview.general.scale": "page-width",
   "lilypond-pdf-preview.pointAndClick.highlightDuration": 3000,
-  // Open PDFs in the LilyPond viewer here (user settings send them to LaTeX Workshop).
   "workbench.editorAssociations": {
     "*.pdf": "lilypond.pdf.preview"
   },
@@ -29,6 +30,5 @@
     "editor.formatOnSave": false
   },
 
-  "cSpell.words": ["chordmode"],
-  "workbench.colorTheme": "Visual Studio Dark"
+  "cSpell.words": ["chordmode"]
 }
