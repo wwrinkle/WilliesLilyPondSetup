@@ -9,13 +9,13 @@
 \score {
   <<
     \new ChordNames \chordmode {
-      f1*2:maj7 | g2:m7 c:7 | f1:6 |
-      f/a | af:dim7 | g2:m7 c1.:7 |
+      f1:maj7 | g2:m7 c:7 | f1:maj7 | g2:m7 c:7 |
+      f1/a | af:dim7 | g2:m7 c1.:7 |
       g1:m | g:m7+ | g:m7 | g:m6 |
       g:m7 | c:7 | f1*2:6 |
       f1:7 | e:9 | ef:9 | d:7 |
       g1*2:m7 | g1:m7.5- | c:7 |
-      f1*2:maj7 | ef1:7 | d:7 |
+      f1:7 | e:7 | ef:7 | d:7 |
       g1.:m7 c2:7 | f1:6 | g2:m7 c:7 |
     }
     \relative c' {
